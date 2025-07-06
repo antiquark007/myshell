@@ -1,0 +1,9 @@
+{
+  "name": "myshell",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {},
+  "postCreateCommand": "make",
+  "features": {}
+}

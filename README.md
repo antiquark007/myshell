@@ -1,6 +1,7 @@
 # MyShell - A Simple Unix Shell Implementation
 
-A lightweight, modular Unix shell implementation written in C that supports basic command execution, built-in commands, and optional readline support for enhanced user experience.
+A lightweight, modular Unix shell implementation written in C that supports basic command execution, built-in commands, and optional readline support for enhanced user experience.[![Open in Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?template_repository=antiquark007/myshell)
+
 
 ## Features
 
@@ -182,3 +183,4 @@ This project is for educational purposes. Feel free to modify and distribute.
 ## Author
 
 Created as part of a systems programming project.
+
