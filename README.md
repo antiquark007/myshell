@@ -180,7 +180,6 @@ This project is for educational purposes. Feel free to modify and distribute.
 - [ ] Job control
 - [ ] Scripting support
 
-## Author
-
-Created as part of a systems programming project.
+## resources
+[Shell Program Explained](https://www.youtube.com/watch?v=ubt-UjcQUYg&t=1791s)
 
