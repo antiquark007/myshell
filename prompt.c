@@ -17,5 +17,5 @@ char *get_prompt() {
         "\001\033[1;32m\002%s@\001\033[1;34m\002%s\001\033[0m\002$ ",
         user, cwd);
 
-    return readline(prompt); // memory allocated, must free later
+    return readline(prompt);
 }
