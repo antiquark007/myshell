@@ -1,32 +1,37 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "parser.h"
 #include "executor.h"
 #include "builtins.h"
-
-#define MAX_CMD_LEN 1024
+#include "prompt.h"
+#include "history.h"
 
 int main() {
-    char input[MAX_CMD_LEN];
+    char *input;
 
     while (1) {
-        printf("myshell> ");
-        fflush(stdout);
+        input = get_prompt();  // custom prompt with readline
 
-        if (fgets(input, MAX_CMD_LEN, stdin) == NULL) break;
-        input[strcspn(input, "\n")] = 0;
+        if (!input) break; // Ctrl+D
+        if (strlen(input) == 0) {
+            free(input);
+            continue;
+        }
 
-        if (strlen(input) == 0) continue;
+        add_to_history(input);  // save to history
 
-        // Built-in: exit
-        if (is_exit(input)) break;
+        if (is_exit(input)) {
+            free(input);
+            break;
+        }
 
-        // Built-in: cd
-        if (handle_cd(input)) continue;
+        if (handle_cd(input)) {
+            free(input);
+            continue;
+        }
 
-        // Execute command
         execute_input(input);
+        free(input);
     }
 
     return 0;
