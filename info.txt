@@ -1,0 +1,9 @@
+my_shell/
+├── Makefile
+├── main.c             // entry point
+├── parser.c           // parsing input, redirection, pipes
+├── parser.h
+├── builtins.c         // cd, exit, other internal commands
+├── builtins.h
+├── executor.c         // handles forking, piping, redirection
+├── executor.h
