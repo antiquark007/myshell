@@ -40,13 +40,6 @@ sudo apt-get update
 sudo apt-get install build-essential libreadline-dev
 ```
 
-**CentOS/RHEL/Fedora:**
-```bash
-sudo yum install gcc make readline-devel
-# or for newer versions:
-sudo dnf install gcc make readline-devel
-```
-
 **macOS:**
 ```bash
 # Install Xcode command line tools
