@@ -25,7 +25,15 @@ int main() {
             break;
         }
 
-        if (handle_cd(input)) {
+        // Check all built-in commands
+        if (handle_cd(input) || 
+            handle_pwd(input) || 
+            handle_echo(input) || 
+            handle_help(input) || 
+            handle_history_cmd(input) || 
+            handle_alias(input) || 
+            handle_unalias(input) || 
+            handle_which(input)) {
             free(input);
             continue;
         }
