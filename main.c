@@ -5,9 +5,12 @@
 #include "builtins.h"
 #include "prompt.h"
 #include "history.h"
+#include "signals.h"
 
 int main() {
     char *input;
+
+    setup_signal_handlers();
 
     while (1) {
         input = get_prompt();  // custom prompt with readline
